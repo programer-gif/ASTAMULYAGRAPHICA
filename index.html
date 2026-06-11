@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ASTA MULYA GRAPHICA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* CSS Tambahan untuk Pop-up Modal Portfolio */
+.portfolio-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover { color: #333; }
+
+#modalTitle {
+    color: #1e1b4b;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-divider {
+    border: 0; height: 3px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    margin-bottom: 20px;
+}
+
+.modal-image-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+    <div class="logo">
+        <span>AM</span> GRAPHICA
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+
+    <a href="#contact" class="btn-nav">
+        Hubungi Kami
+    </a>
+</nav>
+
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-tag">
+            DIGITAL PRINTING • DESIGN • PROMOTION
+        </span>
+
+        <h1>
+            ASTA MULYA GRAPHICA
+        </h1>
+
+        <p>
+            Solusi lengkap untuk kebutuhan desain,
+            percetakan, dan media promosi Anda.
+            Mulai dari konsultasi, desain,
+            produksi hingga finishing dengan
+            hasil berkualitas dan tepat waktu.
+        </p>
+
+        <div class="hero-btn">
+           <a href="https://wa.me/6283149494886?text=Halo%20AM%20Graphica%2C%20saya%20ingin%20konsultasi%20mengenai%20produk%20cetak." target="_blank" class="btn-primary">Konsultasi Sekarang</a>
+            <a href="#services" class="btn-secondary">
+                Lihat Layanan
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="section-title">
+        <span>TENTANG KAMI</span>
+        <h2>Mengapa Memilih AM Graphica?</h2>
+    </div>
+
+    <div class="about-container">
+        <div class="about-text">
+            <p>
+                ASTA MULYA GRAPHICA merupakan
+                perusahaan yang bergerak di bidang
+                desain grafis, digital printing,
+                media promosi, souvenir, dan
+                kebutuhan percetakan lainnya.
+            </p>
+            <p>
+                Didukung oleh tim yang berpengalaman
+                serta peralatan produksi modern,
+                AM Graphica siap membantu
+                kebutuhan personal, bisnis,
+                organisasi maupun instansi Anda.
+            </p>
+        </div>
+
+        <div class="about-cards">
+            <div class="about-card">
+                <i class="fa-solid fa-award"></i>
+                <h3>Kualitas Terbaik</h3>
+                <p>Mengutamakan hasil cetak berkualitas tinggi.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Tepat Waktu</h3>
+                <p>Produksi cepat dan sesuai deadline.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>Tim Profesional</h3>
+                <p>Dikerjakan oleh tenaga berpengalaman.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-title">
+        <span>LAYANAN KAMI</span>
+        <h2>Solusi Lengkap Kebutuhan Cetak</h2>
+    </div>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <i class="fa-solid fa-print"></i>
+            <h3>Digital Printing</h3>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-file"></i>
+            <h3>Print On Demand A3+</h3>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-scissors"></i>
+            <h3>Laser Cutting</h3>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h3>Laser Grafir</h3>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-palette"></i>
+            <h3>Design & Layout</h3>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-gift"></i>
+            <h3>Merchandise</h3>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="section-title">
+        <span>PORTFOLIO</span>
+        <h2>Produk dan Layanan Kami</h2>
+    </div>
+
+   <div class="portfolio-grid">
+    <div class="portfolio-item" onclick="openModal(this, 'STATIONERI.JPEG')">
+        <h3>Stationery</h3>
+    </div>
+    <div class="portfolio-item" onclick="openModal(this, 'MEDIA.JPEG')">
+        <h3>Media Promotion</h3>
+    </div>
+    <div class="portfolio-item" onclick="openModal(this, 'FRINT.JPEG')">
+        <h3>Laser A3+</h3>
+    </div>
+    <div class="portfolio-item" onclick="openModal(this, 'SOUVENIR.JPEG')">
+        <h3>Souvenir</h3>
+    </div>
+    <div class="portfolio-item" onclick="openModal(this, 'DOCUMEN.JPEG')">
+        <h3>Document Printing</h3>
+    </div>
+
+</div>
+
+    <div id="portfolioModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('portfolioModal').style.display='none'">&times;</span>
+            <h2 id="modalTitle">Nama Kategori</h2>
+            <hr class="modal-divider">
+            
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="Produk">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-title">
+        <span>KONTAK</span>
+        <h2>Hubungi Kami</h2>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h3>Lokasi</h3>
+                    <p>
+                        Asta Mulya Graphica, Gg. Tj. Lrg. Dahlia No.111,
+                        Lorok Pakjo, Ilir Barat I, Palembang City, South Sumatra 30139
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>0856-6955-0172</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-brands fa-instagram"></i>
+                <div>
+                    <h3>Instagram</h3>
+                    <p>@am_graphica</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-brands fa-facebook"></i>
+                <div>
+                    <h3>Facebook</h3>
+                    <p>ASTA MULYA GRAPHICA</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-brands fa-tiktok"></i>
+                <div>
+                    <h3>TikTok</h3>
+                    <p>@am_graphica</p>
+                </div>
+            </div>
+        </div>
+
+       <form class="contact-form" action="https://wa.me/6283149494886" method="get" target="_blank">
+    <input type="text" placeholder="Nama Anda" name="nama_input">
+    <textarea placeholder="Tulis pesan Anda" name="pesan_input"></textarea>
+    
+    <input type="hidden" name="text" value="Halo AM Graphica, saya tertarik dengan produk Anda. Mohon info lebih lanjut ya!">
+    
+    <button type="submit">Kirim Pesan</button>
+</form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASTA MULYA GRAPHICA</h2>
+        <p>Solusi Desain, Percetakan, dan Media Promosi Anda.</p>
+
+       <div class="social">
+    <a href="https://www.instagram.com/am_graphica" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/ASTA%20MULYA%20GRAPHICA" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://wa.me/6283149494886" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@am_graphica" target="_blank">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.google.com/search?client=ms-android-vivo-rvo2&hs=iW3p&sca_esv=e91ab52f7eb13d34&hl=in-ID&cs=0&sxsrf=ANbL-n76y0MAPhoTKQwmxTanCB9QtSZLDg%3A1781162132334&kgmid=%2Fg%2F11zcj67vxz&q=Asta%20Mulya%20Graphica&shem=rimspwouoe%2Crimspwouohe&shndl=30&source=sh%2Fx%2Floc%2Fact%2Fm1%2F4&kgs=968463d8341b19f2" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+    </a>
+</div>
+
+        <p class="copyright">
+            © 2026 ASTA MULYA GRAPHICA
+        </p>
+    </div>
+</footer>
+<a href="https://wa.me/6283149494886" class="wa-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function openModal(element, imageName) {
+    // Mengambil teks h3 secara dinamis dari kartu portfolio yang di-klik
+    const title = element.querySelector('h3').innerText;
+    
+    document.getElementById('modalTitle').innerText = "Daftar Produk " + title;
+    document.getElementById('modalImage').src = imageName; 
+    
+    // Membuka Pop-up
+    document.getElementById('portfolioModal').style.display = "flex";
+}
+
+function closeModal(event) {
+    // Menutup pop-up jika pengguna klik area luar kotak putih
+    if (event.target.id === 'portfolioModal') {
+        document.getElementById('portfolioModal').style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
